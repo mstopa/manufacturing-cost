@@ -11,13 +11,6 @@ if __name__ == "__main__":
     classifier = SklearnClassifier(args.model_path)
     df = pd.read_csv("data/processed_data.csv")
 
-    feature_names = df.drop(["Id", "Response", "subset"], axis=1).columns
-    with open("feats.txt", "w") as f:
-        f.write("[")
-        for feat in feature_names:
-            f.write(f"'{feat}', ")
-        f.write("]")
-
     sample = df.sample(1)
     label, features = sample["Response"].values[0], sample.drop(["Id", "Response", "subset"], axis=1).values[0]
     

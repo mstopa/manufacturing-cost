@@ -19,6 +19,8 @@ class SklearnClassifier:
     def _predict(self, X: pd.DataFrame) -> np.ndarray:
         return self.model.predict(X)
     
-    def predict(self, X: np.ndarray) -> np.ndarray:
+    def predict(self, X: np.ndarray | list) -> np.ndarray:
+        if isinstance(X, list):
+            X = np.array(X)
         X = pd.DataFrame(data=X.reshape((1, -1)), columns=self.feature_names)
         return self._predict(X)[0]
