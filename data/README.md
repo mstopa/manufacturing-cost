@@ -3,7 +3,7 @@
 pip install kaggle
 ```
 
-## Linux authentication
+## Kaggle authentication
 1. [Generate API token](https://www.kaggle.com/docs/api)
 
 ```bash
@@ -12,8 +12,11 @@ mv ~/Downloads/kaggle.json ~/.kaggle
 chmod 600 ~/.kaggle/kaggle.json
 ```
 
+## Competition authentication
+1. Accept [terms and conditions](https://www.kaggle.com/competitions/bosch-production-line-performance)
+
 ## Download the data
 ```bash
-kaggle datasets download -d vinicius150987/manufacturing-cost -p data
+kaggle competitions download -c bosch-production-line-performance -p data
 unzip data/manufacturing-cost.zip -d data
 ```
