@@ -18,5 +18,6 @@ chmod 600 ~/.kaggle/kaggle.json
 ## Download the data
 ```bash
 kaggle competitions download -c bosch-production-line-performance -p data
-unzip data/manufacturing-cost.zip -d data
+unzip data/bosch-production-line-performance.zip -d data
+find data -iname '*.zip' | grep -v bosch-production | xargs -I{} unzip {} -d data
 ```

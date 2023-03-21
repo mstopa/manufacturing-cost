@@ -1,2 +1,8 @@
 jupyter
 pandas
+scikit-learn
+numpy
+seaborn
+matplotlib
+keras
+joblib
