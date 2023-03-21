@@ -42,3 +42,28 @@ python3 -m venv .venv
 ipython kernel install --name <KERNEL_NAME> --user
 ```
 2. After opening the notebook, make sure to switch to the custom kernel.
+
+### Run Python console app
+1. Train a Sklearn model
+2. 
+```bash
+pip install .
+
+usage: __main__.py [-h] [--model_path MODEL_PATH]
+
+options:
+  -h, --help            show this help message and exit
+  --model_path MODEL_PATH
+```
+
+```bash
+python -m failure_predictor
+Predicted: 1 for label: 1
+```
+
+### Bottle API
+```
+python bottle_api/app.py
+```
+
+![Post request](request.png)

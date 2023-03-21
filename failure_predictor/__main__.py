@@ -1,6 +1,6 @@
 import argparse
 
-from classifiers import SklearnClassifier
+from failure_predictor.classifiers import SklearnClassifier
 import pandas as pd
 
 if __name__ == "__main__":
